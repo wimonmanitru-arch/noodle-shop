@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ร้านบะหมี่อร่อย ส่งตรงถึงบ้าน">
+  <title>เส้นสุข Noodle House | บะหมี่กึ่งสำเร็จรูป</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#"><span class="brand-mark">🍜</span><span>เส้นสุข <small>NOODLE HOUSE</small></span></a>
+  <nav><a href="#products">สินค้า</a><a href="#how">วิธีสั่งซื้อ</a><button class="cart-button" id="cart-toggle">ตะกร้า <b id="cart-count">0</b></button></nav>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-copy"><p class="eyebrow">อร่อยง่าย ๆ ได้ทุกวัน</p><h1>เติมความสุข<br><em>ในทุกเส้น</em></h1>
+      <p>บะหมี่กึ่งสำเร็จรูปคัดรสชาติยอดนิยม สั่งง่าย ส่งถึงบ้าน</p>
+      <a class="primary-link" href="#products">เลือกซื้อสินค้า <span>→</span></a>
+    </div>
+    <div class="hero-art"><div class="sun"></div><div class="hero-bowl">🍜</div><span class="floating f1">อร่อยคุ้ม</span><span class="floating f2">พร้อมส่ง</span></div>
+  </section>
+  <section class="benefits"><div>⚡ <b>สั่งซื้อง่าย</b><small>เลือกสินค้าได้ทันที</small></div><div>📦 <b>แพ็คอย่างดี</b><small>ตรวจสอบก่อนจัดส่ง</small></div><div>🧡 <b>ใส่ใจทุกออเดอร์</b><small>ข้อมูลครบถ้วน</small></div></section>
+  <section class="section" id="products"><div class="section-heading"><div><p class="eyebrow">OUR MENU</p><h2>สินค้าของเรา</h2></div><p>เลือกความอร่อยที่คุณชอบ</p></div>
+    <div class="product-grid" id="product-grid"></div>
+  </section>
+  <section class="how section" id="how"><p class="eyebrow">HOW TO ORDER</p><h2>สั่งง่ายใน 3 ขั้นตอน</h2><div class="steps"><div><b>01</b><h3>เลือกสินค้า</h3><p>เพิ่มสินค้าที่ต้องการลงตะกร้า</p></div><div><b>02</b><h3>กรอกข้อมูล</h3><p>ระบุชื่อ เบอร์โทร และที่อยู่จัดส่ง</p></div><div><b>03</b><h3>รอรับสินค้า</h3><p>ร้านตรวจสอบและเตรียมจัดส่ง</p></div></div></section>
+</main>
+<footer><div class="brand"><span class="brand-mark">🍜</span><span>เส้นสุข <small>NOODLE HOUSE</small></span></div><p>เว็บไซต์ตัวอย่างสำหรับโครงงานระบบร้านค้าออนไลน์</p><small>© 2026 Sen Suk Noodle House</small></footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="cart-drawer" aria-label="ตะกร้าสินค้า">
+  <div class="drawer-head"><h2>ตะกร้าสินค้า</h2><button class="icon-button" id="close-cart">✕</button></div>
+  <div id="cart-items" class="cart-items"></div>
+  <div class="cart-total"><span>ยอดรวม</span><strong id="cart-total">฿0</strong></div>
+  <button class="checkout-button" id="checkout-open">ดำเนินการสั่งซื้อ</button>
+</aside>
+<div class="modal" id="checkout-modal">
+  <div class="modal-card"><div class="drawer-head"><div><p class="eyebrow">CHECKOUT</p><h2>ข้อมูลจัดส่ง</h2></div><button class="icon-button" id="close-checkout">✕</button></div>
+    <form id="order-form">
+      <label>ชื่อ-นามสกุล<input name="customerName" required maxlength="100" placeholder="ชื่อผู้รับพัสดุ"></label>
+      <label>เบอร์โทรศัพท์<input name="phone" required inputmode="tel" pattern="[0-9+() -]{9,20}" placeholder="08XXXXXXXX"></label>
+      <label>ที่อยู่จัดส่ง<textarea name="address" required rows="3" placeholder="บ้านเลขที่ หมู่บ้าน ถนน ตำบล อำเภอ จังหวัด รหัสไปรษณีย์"></textarea></label>
+      <label>หมายเหตุ (ถ้ามี)<input name="note" placeholder="เช่น ฝากไว้ที่ป้อม รปภ."></label>
+      <div class="checkout-summary"><span>ยอดชำระสินค้า</span><b id="checkout-total">฿0</b></div>
+      <button class="checkout-button" type="submit">ยืนยันคำสั่งซื้อ</button>
+      <p class="form-note">* ตัวอย่างนี้ยังไม่รองรับการชำระเงินออนไลน์</p>
+    </form>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body></html>
